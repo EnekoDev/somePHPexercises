@@ -1,0 +1,17 @@
+{
+    "name": "eneko/php",
+    "autoload": {
+        "psr-4": {
+            "Eneko\\Php\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "EnekoDev",
+            "email": "enekolabdev@gmail.com"
+        }
+    ],
+    "require-dev": {
+        "phpunit/phpunit": "^13.0"
+    }
+}

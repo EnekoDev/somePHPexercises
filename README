@@ -1,0 +1,222 @@
+Here’s a **progressive set of PHP exercises** that skip the trivial basics and steadily push you toward more advanced, real-world skills. Each level builds on the previous one.
+
+---
+
+## 🟢 Level 1 — Intermediate Foundations
+
+### 1. Data Transformation Pipeline
+
+Create a script that:
+
+* Takes an array of associative arrays (e.g., users with `name`, `email`, `age`)
+* Filters users over a certain age
+* Sorts them by name
+* Outputs a transformed array with only `name` and a masked email
+
+👉 Focus: `array_map`, `array_filter`, `array_reduce`, custom sorting
+
+---
+
+### 2. Custom Session Manager
+
+Implement a class that:
+
+* Wraps PHP sessions
+* Adds flash messages (set once, read once)
+* Stores structured user data
+
+👉 Bonus: Add optional encryption for stored session values
+
+---
+
+### 3. File-Based Cache System
+
+Build a caching class:
+
+* `set($key, $value, $ttl)`
+* `get($key)`
+* Automatically expires entries
+
+👉 Constraints:
+
+* Store cache as files
+* Handle serialization safely
+* Avoid race conditions
+
+---
+
+## 🟡 Level 2 — Backend Logic & Architecture
+
+### 4. Simple Router (No Framework)
+
+Create a mini routing system:
+
+* Map URLs like `/users/{id}` to callbacks
+* Support GET and POST
+* Extract parameters dynamically
+
+👉 Bonus: Add middleware support
+
+---
+
+### 5. Dependency Injection Container
+
+Build a lightweight DI container:
+
+* Bind interfaces to implementations
+* Support singleton and transient bindings
+* Resolve constructor dependencies via reflection
+
+---
+
+### 6. Event Dispatcher System
+
+Implement an event system:
+
+* Register listeners
+* Dispatch events with payloads
+* Allow stopping propagation
+
+👉 Example use: user registration triggers email + logging
+
+---
+
+## 🔵 Level 3 — Database & State
+
+### 7. Query Builder (PDO-based)
+
+Create a fluent query builder:
+
+```php
+$db->table('users')
+   ->where('age', '>', 18)
+   ->orderBy('name')
+   ->limit(10)
+   ->get();
+```
+
+👉 Requirements:
+
+* Prevent SQL injection
+* Support chaining
+* Build SQL dynamically
+
+---
+
+### 8. Active Record Mini-ORM
+
+Design a base model:
+
+* `User::find($id)`
+* `$user->save()`
+* `$user->delete()`
+
+👉 Bonus:
+
+* Add relationships (`hasMany`, `belongsTo`)
+
+---
+
+### 9. Transaction Manager
+
+Wrap PDO transactions:
+
+* Nested transactions (simulate if needed)
+* Rollback on failure
+* Logging support
+
+---
+
+## 🔴 Level 4 — Advanced Patterns & Systems
+
+### 10. Job Queue System (No Redis)
+
+Simulate a queue using:
+
+* Database or file storage
+* Worker script that processes jobs
+
+👉 Features:
+
+* Retry mechanism
+* Failed job handling
+
+---
+
+### 11. Rate Limiter
+
+Implement a rate limiter:
+
+* Limit requests per IP (e.g., 100/min)
+* Use file or DB storage
+
+👉 Bonus:
+
+* Sliding window algorithm (not just fixed window)
+
+---
+
+### 12. Plugin System
+
+Design a plugin architecture:
+
+* Load PHP classes dynamically from a directory
+* Allow plugins to register hooks/events
+
+👉 Think: how WordPress plugins work
+
+---
+
+## 🟣 Level 5 — Real-World Engineering
+
+### 13. REST API with Authentication
+
+Build a REST API:
+
+* JWT-based authentication
+* CRUD endpoints for a resource
+
+👉 Constraints:
+
+* No frameworks
+* Proper HTTP status codes
+* Input validation
+
+---
+
+### 14. CLI Tool with Symfony Console (or pure PHP)
+
+Create a CLI app:
+
+* Commands like `php app.php migrate`, `php app.php queue:work`
+
+👉 Bonus:
+
+* Build your own minimal CLI parser
+
+---
+
+### 15. WebSocket Chat Server (Advanced)
+
+Using PHP (e.g., Ratchet or pure sockets):
+
+* Multi-user chat
+* Broadcast messages
+* Handle connections/disconnections
+
+---
+
+## 🧠 Stretch Challenges
+
+* Implement **PSR-4 autoloading manually**
+* Build a **mini Laravel-like framework**
+* Add **unit tests with PHPUnit**
+* Introduce **static analysis (PHPStan/Psalm)**
+
+---
+
+If you want, I can:
+
+* Turn these into a **structured roadmap (2–4 weeks)**
+* Or give you **solutions / starter code for any exercise**
+
