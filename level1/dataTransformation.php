@@ -20,5 +20,20 @@ function filterAge( array $users, int $age):Array {
 }
 
 function sortName( array $users ) {
+    $sortedUsers = $users;    
     
+    return $sortedUsers;
+}
+
+function transformArray(array $users) {
+    $transformed = [];
+    foreach ($users as $user) {
+        unset($user["age"]);
+        $index = strpos($user["email"], "@");
+        $email = substr_replace($user["email"], str_repeat("*", $index), 0, $index);
+        $user["email"] = $email;
+        array_push($transformed, $user);
+    }
+    var_dump($transformed);
+    return $transformed;
 }
