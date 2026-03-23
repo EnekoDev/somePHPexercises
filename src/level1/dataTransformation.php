@@ -21,7 +21,9 @@ function filterAge( array $users, int $age):Array {
 
 function sortName( array $users ) {
     $sortedUsers = $users;    
-    
+    usort($sortedUsers, fn ($user1, $user2) => (
+        strcmp($user1["name"], $user2["name"]
+    )));
     return $sortedUsers;
 }
 

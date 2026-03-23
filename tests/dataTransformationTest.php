@@ -2,7 +2,7 @@
 
 use PHPUnit\Framework\TestCase;
 
-require_once __DIR__ . "/../level1/dataTransformation.php";
+require_once __DIR__ . "/../src/level1/dataTransformation.php";
 
 class DataTransformationTest extends TestCase {
     public $users = [
