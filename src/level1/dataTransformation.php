@@ -36,6 +36,5 @@ function transformArray(array $users) {
         $user["email"] = $email;
         array_push($transformed, $user);
     }
-    var_dump($transformed);
     return $transformed;
 }
