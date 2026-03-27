@@ -44,7 +44,7 @@ class FileCache {
 
     public function delete(string $key):void {
         $file = $this->getFilePath($key);
-        if (file_exists($key)) {
+        if (file_exists($file)) {
             unlink($file);
         }
     }
