@@ -18,7 +18,7 @@ class FileCache {
     public function set(string $key, mixed $data, int $ttl = 300):void {
         $expires = time() + $ttl;
         $content = serialize([
-            "erxpires" => $expires,
+            "expires" => $expires,
             "data" => $data
         ]);
         file_put_contents($this->getFilePath($key), $content);

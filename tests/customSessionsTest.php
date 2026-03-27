@@ -6,7 +6,9 @@ require_once __DIR__ . '/../src/level1/customSessions.php';
 
 class CustomSessionsTest extends TestCase {
     public function testCreateSession() {
-        session_destroy();
+        if (session_status() === PHP_SESSION_ACTIVE) {
+            session_destroy();
+        }
         new CustomSession();
         $this->assertEquals(PHP_SESSION_ACTIVE, session_status());
     }
